@@ -174,19 +174,19 @@
     </Compile>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Context\DatabaseContext.cs" />
-    <Compile Include="Migrations\20180718073818_First.cs" />
-    <Compile Include="Migrations\20180718073818_First.designer.cs">
-      <DependentUpon>20180718073818_First.cs</DependentUpon>
+    <Compile Include="Migrations\20180718173433_First.cs" />
+    <Compile Include="Migrations\20180718173433_First.designer.cs">
+      <DependentUpon>20180718173433_First.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
+    <Compile Include="Models\NotificationLocation.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="Views\Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Badge.cs" />
-    <Compile Include="Models\BindableBase.cs" />
+    <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Notification.cs" />
     <Compile Include="Models\NotificationType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -206,6 +206,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Assets\Fonts\Play\Play-Bold.ttf" />
+    <Resource Include="Assets\Fonts\Play\Play-Regular.ttf" />
+    <Resource Include="Assets\Fonts\Roboto_Condensed\RobotoCondensed-Bold.ttf" />
+    <Resource Include="Assets\Fonts\Roboto_Condensed\RobotoCondensed-BoldItalic.ttf" />
+    <Resource Include="Assets\Fonts\Roboto_Condensed\RobotoCondensed-Italic.ttf" />
+    <Resource Include="Assets\Fonts\Roboto_Condensed\RobotoCondensed-Light.ttf" />
+    <Resource Include="Assets\Fonts\Roboto_Condensed\RobotoCondensed-LightItalic.ttf" />
+    <Resource Include="Assets\Fonts\Roboto_Condensed\RobotoCondensed-Regular.ttf" />
     <None Include="Database.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -224,6 +232,62 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Fonts\Roboto_Condensed\LICENSE.txt" />
+    <Resource Include="Assets\Icons\Alert_system.png" />
+    <Resource Include="Assets\Icons\Alert_type\Alert_type_error.png" />
+    <Resource Include="Assets\Icons\Alert_type\Alert_type_fire.png" />
+    <Resource Include="Assets\Icons\Alert_type\Alert_type_other.png" />
+    <Resource Include="Assets\Icons\Alert_type\Alert_type_penetration.png" />
+    <Resource Include="Assets\Icons\Alert_type\Alert_type_temperature.png" />
+    <Resource Include="Assets\Icons\Alert_type\Alert_type_water_leak.png" />
+    <Resource Include="Assets\Icons\Arrow_corner_continued.png" />
+    <Resource Include="Assets\Icons\Base_sheet_3D_blue.png" />
+    <Resource Include="Assets\Icons\Filter\Filter_empty_64.png" />
+    <Resource Include="Assets\Icons\Filter\Filter_empty_off.png" />
+    <Resource Include="Assets\Icons\Filter\Filter_fill_64.png" />
+    <Resource Include="Assets\Icons\Filter\Filter_fill_off.png" />
+    <Resource Include="Assets\Icons\Filter\Filter_fill_on.png" />
+    <Resource Include="Assets\Icons\Filter\Filter_off_64.png" />
+    <Resource Include="Assets\Icons\Filter\Filter_on_64.png" />
+    <Resource Include="Assets\Icons\Filter\Func_exit_cancel.png" />
+    <Resource Include="Assets\Icons\Filter\Func_exit_do.png" />
+    <Resource Include="Assets\Icons\Filter\Func_other_64.png" />
+    <Resource Include="Assets\Icons\Filter\Location_choice_no_64.png" />
+    <Resource Include="Assets\Icons\Filter\Location_choice_yes_64.png" />
+    <Resource Include="Assets\Icons\Filter\System\System_climat.png" />
+    <Resource Include="Assets\Icons\Filter\System\System_electromechanics.png" />
+    <Resource Include="Assets\Icons\Filter\System\System_guard.png" />
+    <Resource Include="Assets\Icons\Filter\System\System_light.png" />
+    <Resource Include="Assets\Icons\Filter\System\System_power.png" />
+    <Resource Include="Assets\Icons\Filter\System\System_water.png" />
+    <Resource Include="Assets\Icons\Form\Arrow_form_back_64.png" />
+    <Resource Include="Assets\Icons\Form\Arrow_forward_64.png" />
+    <Resource Include="Assets\Icons\Form\Data_print_64.png" />
+    <Resource Include="Assets\Icons\Form\Details_64.png" />
+    <Resource Include="Assets\Icons\Form\Dustbin_64.png" />
+    <Resource Include="Assets\Icons\Form\Exit_64.png" />
+    <Resource Include="Assets\Icons\Form\List_rec_add_64.png" />
+    <Resource Include="Assets\Icons\Form\List_rec_dub_64.png" />
+    <Resource Include="Assets\Icons\Form\Win_size_full_screen_64.png" />
+    <Resource Include="Assets\Icons\Form\Win_size_normal_64.png" />
+    <Resource Include="Assets\Icons\Icon_empty.png" />
+    <Resource Include="Assets\Icons\Location\Location_apartment41_abris_64.png" />
+    <Resource Include="Assets\Icons\Location\Location_attic_64.png" />
+    <Resource Include="Assets\Icons\Location\Location_balcony_64.png" />
+    <Resource Include="Assets\Icons\Location\Location_bathroom_abris_64.png" />
+    <Resource Include="Assets\Icons\Location\Location_bedroom_boy2_64.png" />
+    <Resource Include="Assets\Icons\Location\Location_bedroom_grown2_64.png" />
+    <Resource Include="Assets\Icons\Location\Location_cabinet_64.png" />
+    <Resource Include="Assets\Icons\Location\Location_corridor_64.png" />
+    <Resource Include="Assets\Icons\Location\Location_dining_room_64.png" />
+    <Resource Include="Assets\Icons\Location\Location_dining_room_abris_64.png" />
+    <Resource Include="Assets\Icons\Location\Location_dressing_abris_64.png" />
+    <Resource Include="Assets\Icons\Location\Location_hallway_64.png" />
+    <Resource Include="Assets\Icons\Location\Location_living_64.png" />
+    <Resource Include="Assets\Icons\Location\Location_technical_room_64.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

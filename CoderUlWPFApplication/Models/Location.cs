@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace CoderUlWPFApplication.Models
 {
-    public class Badge
+    public class Location
     {
         public int Id { get; set; }
 
@@ -13,5 +14,7 @@ namespace CoderUlWPFApplication.Models
         [Required]
         [MaxLength(655)]
         public string ImagePath { get; set; }
+
+        public ICollection<NotificationLocation> NotificationLocations { get; set; }
     }
 }

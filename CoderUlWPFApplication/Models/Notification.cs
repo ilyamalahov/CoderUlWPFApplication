@@ -15,8 +15,10 @@ namespace CoderUlWPFApplication.Models
         [MaxLength(655)]
         public string Message { get; set; }
 
+        public int NotificationTypeId { get; set; }
+
         public NotificationType NotificationType { get; set; }
 
-        public ICollection<Badge> Badges { get; set; }
+        public ICollection<NotificationLocation> NotificationLocations { get; set; }
     }
 }
