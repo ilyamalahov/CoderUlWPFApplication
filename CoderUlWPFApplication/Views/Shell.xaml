@@ -10,8 +10,7 @@
         mc:Ignorable="d"
         Title="NotificationsView" 
         Height="500" 
-        Width="750" 
-        ResizeMode="NoResize" 
+        Width="750"
         Background="Black" 
         Foreground="#FF788CAF">
     <Window.Resources>
@@ -28,13 +27,19 @@
             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Оповещение" FontSize="24"/>
             <StackPanel Grid.Row="1" Orientation="Horizontal">
                 <TextBlock Text="Отбор" FontSize="16" VerticalAlignment="Center"/>
-                <Button Margin="5" Padding="5">
+                <Button Margin="5" Padding="5" BorderThickness="0">
                     <Button.Content>
                         <Image Width="15" Height="15" Source="/CoderUlWPFApplication;component/Assets/Icons/Filter/Filter_empty_off.png" />
                     </Button.Content>
                 </Button>
             </StackPanel>
-            <ListView Grid.Row="2" ItemsSource="{Binding Source={StaticResource NotificationsViewSource}}" Background="{x:Null}" BorderBrush="{x:Null}">
+            <ListView 
+                Grid.Row="2" 
+                ItemsSource="{Binding Source={StaticResource NotificationsViewSource}}" 
+                Background="{x:Null}" 
+                BorderBrush="{x:Null}" 
+                SelectionMode="Single"
+                IsSynchronizedWithCurrentItem="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -93,48 +98,46 @@
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal">
-                    <Button Margin="5" Padding="5">
+                    <Button Margin="5" Padding="5" BorderThickness="0" Command="{Binding PreviousCommand}">
                         <Button.Content>
                             <Image Width="20" Height="20" Source="/CoderUlWPFApplication;component/Assets/Icons/Form/Arrow_form_back_64.png" />
                         </Button.Content>
                     </Button>
-                    <Button Margin="5" Padding="5">
+                    <Button Margin="5" Padding="5" BorderThickness="0" Command="{Binding PrintCommand}">
                         <Button.Content>
                             <Image Width="20" Height="20" Source="/CoderUlWPFApplication;component/Assets/Icons/Form/Data_print_64.png" />
                         </Button.Content>
                     </Button>
-                    <Button Margin="5" Padding="5">
+                    <Button Margin="5" Padding="5" BorderThickness="0" Command="{Binding DeleteCommand}">
                         <Button.Content>
                             <Image Width="20" Height="20" Source="/CoderUlWPFApplication;component/Assets/Icons/Form/Dustbin_64.png" />
                         </Button.Content>
                     </Button>
-                    <Button Margin="5" Padding="5">
+                    <Button Margin="5" Padding="5" BorderThickness="0" Command="{Binding EditCommand}">
                         <Button.Content>
                             <Image Width="20" Height="20" Source="/CoderUlWPFApplication;component/Assets/Icons/Form/Details_64.png" />
                         </Button.Content>
                     </Button>
-                    <Button Margin="5" Padding="5">
+                    <Button Margin="5" Padding="5" BorderThickness="0" Command="{Binding AddCommand}">
                         <Button.Content>
                             <Image Width="20" Height="20" Source="/CoderUlWPFApplication;component/Assets/Icons/Form/List_rec_add_64.png" />
                         </Button.Content>
                     </Button>
-                    <Button Margin="5" Padding="5">
+                    <Button Margin="5" Padding="5" BorderThickness="0" Command="{Binding DuplicateCommand}">
                         <Button.Content>
                             <Image Width="20" Height="20" Source="/CoderUlWPFApplication;component/Assets/Icons/Form/List_rec_dub_64.png" />
                         </Button.Content>
                     </Button>
-                    <ToggleButton Margin="5">
-                        <ToggleButton>
-                            <Image Width="20" Height="20" Source="/CoderUlWPFApplication;component/Assets/Icons/Form/Win_size_full_screen_64.png" />
-                        </ToggleButton>
+                    <ToggleButton Margin="5" Padding="5" BorderThickness="0" IsEnabled="False">
+                        <Image Width="20" Height="20" Source="/CoderUlWPFApplication;component/Assets/Icons/Form/Win_size_full_screen_64.png" />
                     </ToggleButton>
-                    <Button Margin="5" Padding="5">
+                    <Button Margin="5" Padding="5" BorderThickness="0" Command="{Binding NextCommand}">
                         <Button.Content>
                             <Image Width="20" Height="20" Source="/CoderUlWPFApplication;component/Assets/Icons/Form/Arrow_forward_64.png" />
                         </Button.Content>
                     </Button>
                 </StackPanel>
-                <Button Grid.Column="1" Padding="5" Margin="5" Command="{Binding QuitCommand}">
+                <Button Grid.Column="1" Padding="5" Margin="5" Command="{Binding QuitCommand}" BorderThickness="0">
                     <Button.Content>
                         <Image Width="20" Height="20" Source="/CoderUlWPFApplication;component/Assets/Icons/Form/Exit_64.png" />
                     </Button.Content>
